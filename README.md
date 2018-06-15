@@ -54,9 +54,9 @@ The ranking of the hands should follow the [Texas Hold'em rules](https://www.dre
 Our object is updated when we test these possible suits:
 
 ```
-this.valueOfRank //Best rank, for example, the value of our best pair
-this.valueOfRank2 //Second possible suit (ex: value of the second pair)
-this.tabWithoutHandRank //Tab with our remaining values
+this.bestHandRankValue //Best rank, for example, the value of our best pair
+this.secondBestHandRankValue //Second possible suit (ex: value of the second pair)
+this.leftOverCards //Tab with our remaining values
 ```
 
 Two comparators if we have a draw:

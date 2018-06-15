@@ -1,8 +1,7 @@
 package com.poker;
 
-public class Card implements Comparable{
+public class Card implements Comparable {
 
-	private int rank;
 	private char value_card;
 	private char type_card;
 	
@@ -11,13 +10,28 @@ public class Card implements Comparable{
 	}
 	
 	public Card(char val, char type){
-		rank = calcRank(val);
-		value_card = val;
-		type_card = type;
+		value_card = val; 
+		type_card = type; 
+	}
+	
+	public void setValueCard(char valueCard){
+		value_card = valueCard;
+	}
+	
+	public char getValueCard(){
+		return value_card;
+	}
+	
+	public void setTypeCard(char typeCard){
+		type_card = typeCard;
+	}
+	
+	public char getTypeCard(){
+		return type_card;
 	}
 
-	private int calcRank(char value_card2) {
-		switch(value_card2){
+	public int getRank() {
+		switch (value_card){
 		case '1': 
 			return 1;
 		case '2': 
@@ -50,23 +64,10 @@ public class Card implements Comparable{
 			return 0;
 		}
 	}
-
-	public int getRank(){
-		return rank;
-	}
-	
-	public char getValueCard(){
-		return value_card;
-	}
-	
-	public char getTypeCard(){
-		return type_card;
-	}
-
 	
 	 @Override
-	    public int compareTo(Object o) {
-	         return this.getRank() - (((Card) o).getRank());
-	    }
+    public int compareTo(Object o) {
+         return this.getRank() - ( ((Card) o).getRank() );
+    }
 	
 }
